@@ -17,9 +17,9 @@ COPY --from=fetcher --chown=www-data:www-data /civicrm-extract/civicrm/civicrm /
 ADD "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar" /usr/local/bin/wp
 RUN chmod +rx /usr/local/bin/wp
 
-COPY civicrm-entrypoint.sh /usr/local/bin/
-RUN chmod +rx /usr/local/bin/civicrm-entrypoint.sh
+COPY civicrm-entrypoint.bash /usr/local/bin/
+RUN chmod +rx /usr/local/bin/civicrm-entrypoint.bash
 
-ENTRYPOINT ["/usr/local/bin/civicrm-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/civicrm-entrypoint.bash"]
 # This value must match the server type you're using, if you switch to using the wordpress PHP-FPM version, this value must change, too
 CMD ["apache2-foreground"]
