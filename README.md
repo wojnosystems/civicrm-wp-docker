@@ -1,4 +1,4 @@
-# civicrm-docker
+# civicrm-wp-docker
 
 Build a CiviCRM+Wordpress site using a self-contained docker image.
 
