@@ -10,7 +10,7 @@ services:
     volumes:
       - db-data:/var/lib/mysql
   www:
-    image: "civicrm-wp-docker:5.25.0"
+    image: "cwojno/civicrm-wp-docker:latest"
     ports:
       - 8080:80
     environment:
